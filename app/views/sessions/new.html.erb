@@ -3,10 +3,13 @@
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <%= form_with(url: login_path, scope: :session, local: true) do |form| %>
-      <%= form.label :email %>
-      <%= form.email_filed :email, class: 'form-control' %>
-      <%= form.label :password %>
-      <%= form.password_filed :password, class: 'form-control' %>
+      <%= form.label :email, "メールアドレス" %>
+      <%= form.email_field :email, class: 'form-control' %>
+      <%= form.label :password, "パスワード" %>
+      <%= form.password_field :password, class: 'form-control' %>
+      <%= form.submit "ログイン", class: "btn btn-primary" %>
+    <% end %>
 
+    <p>会員登録は <%= link_to "こちら", signup_path %></p>
   </div>
 </div>
