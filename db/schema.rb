@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_26_121109) do
+ActiveRecord::Schema.define(version: 2021_07_30_130852) do
+
+  create_table "items", force: :cascade do |t|
+    t.string "name"
+    t.integer "price"
+    t.integer "stock"
+    t.string "image_url"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "microposts", force: :cascade do |t|
     t.text "content"
