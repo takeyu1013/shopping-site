@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- ユーザは会員登録することができる
+- ユーザは在庫がある商品を検索することができる
+- ユーザは在庫がある商品の詳細を閲覧することができる
+- ユーザは在庫がある気に入った商品をカートにいれることができる
+- ユーザは在庫がある商品をログイン後に購入することができる
+- ユーザは自分の購入履歴を確認することができる
+- 出店者は画像付きの商品をショッピングサイトに登録することができる
+- 出店者は商品の在庫を補充することができる
+- 出店者は販売履歴（ユーザー名や商品の郵送先）を確認することができる
+- ユーザは過去に商品を購入したことがあれば、運営から（50%値引きクーポン or 10%割引きクーポン or 500円割引クーポン）を受け取ることができる。（抽選で3名）
+- ユーザはクーポンを所有している場合は商品購入時にクーポンを利用するか選択できる。
+- クーポンを利用した場合は所有しているクーポンが減り、割引で購入することができる。クーポンは同時に2枚まで使用することができる。
+- ユーザは知り合いに欲しい物リストをURLで共有することができる。URLを受け取った知り合いは欲しい物リストの中から商品を購入し、プレゼントすることができる。プレゼントはユーザの購入履歴に表示され、プレゼントとして購入されたことを認識することができる。
