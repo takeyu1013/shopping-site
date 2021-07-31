@@ -1,11 +1,18 @@
 <% provide(:title, '商品一覧') %>
 <h1>商品一覧</h1>
 
+<%= form_tag(items_index_path, :method => 'get') do %>
+  <%= text_field_tag :keyword %>
+  <%= submit_tag '検索' %>
+<% end %>
+
 <ul class="items">
   <% @items.each do | item | %>
   <li>
     <%= image_tag(item.image_url, alt: item.name + "の画像") %>
-    <%= link_to item.name, item %>
+    商品名：<%= link_to item.name, item %>
+    価格：<%= item.price %>
+    数量：<%= item.stock %>
   </li>
   <% end %>
 </ul>
