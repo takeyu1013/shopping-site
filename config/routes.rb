@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'items/new'
+  get 'items/index'
   get 'static_pages/home'
   get 'static_pages/help'
   get 'static_pages/about'
@@ -8,6 +10,7 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
   resources :microposts
   resources :users
+  resources :items
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root 'static_pages#home'
 end

@@ -1,0 +1,11 @@
+<% provide(:title, '商品一覧') %>
+<h1>商品一覧</h1>
+
+<ul class="items">
+  <% @items.each do | item | %>
+  <li>
+    <%= image_tag(item.image_url, alt: item.name + "の画像") %>
+    <%= link_to item.name, item %>
+  </li>
+  <% end %>
+</ul>
