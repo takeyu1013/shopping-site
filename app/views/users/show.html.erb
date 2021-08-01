@@ -15,5 +15,14 @@
   <%= @user.email %>
 </p>
 
+<ul class="cart_items">
+  <% @cart_items.each do | item | %>
+  <li>
+    商品名：<%= item.item_id %>
+    数量：<%= item.quantity%>
+  </li>
+  <% end %>
+</ul>
+
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
