@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_30_130852) do
+ActiveRecord::Schema.define(version: 2021_08_01_054642) do
+
+  create_table "cart_items", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "item_id", null: false
+    t.integer "quantity"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["item_id"], name: "index_cart_items_on_item_id"
+    t.index ["user_id", "created_at"], name: "index_cart_items_on_user_id_and_created_at"
+    t.index ["user_id"], name: "index_cart_items_on_user_id"
+  end
 
   create_table "items", force: :cascade do |t|
     t.string "name"
@@ -36,4 +47,6 @@ ActiveRecord::Schema.define(version: 2021_07_30_130852) do
     t.string "password_digest"
   end
 
+  add_foreign_key "cart_items", "items"
+  add_foreign_key "cart_items", "users"
 end
