@@ -14,16 +14,14 @@
     <header class="navbar navbar-fixed-top navbar-inverse">
       <div class="container">
         <%= link_to "ショッピングサイト", root_url, id: "logo" %>
-        <nav>
           <ul class="nav navbar-nav navbar-right">
             <% if logged_in? %>
-              <li><%= @current_user %></li>
-              <li><%= link_to "ログアウト", logout_path, method: :delete %></li>
+              <li class="nav-Item"><%= link_to current_user.name , '#' %></li>
+              <li class="nav-item"><%= link_to "ログアウト", logout_path, method: :delete %></li>
             <% else %>
-              <li><%= link_to "ログイン", login_path %></li>
+              <li class="nav-item"><%= link_to "ログイン", login_path %></li>
             <% end %>
           </ul>
-        </nav>
       </div>
     </header>
     <%= yield %>
