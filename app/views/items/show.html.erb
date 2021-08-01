@@ -13,5 +13,8 @@
   <%= @item.price %>
 </p>
 
+<%= @session %>
+<% if current_user %>
 <button>カートに入れる</button>
+<% end %>
 <%= link_to 'Back', items_path %>
