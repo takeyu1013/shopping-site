@@ -13,7 +13,7 @@
   <body>
     <header class="navbar navbar-fixed-top navbar-inverse">
       <div class="container">
-        <%= link_to "ショッピングサイト", root_url, id: "logo" %>
+        <%= link_to "ショッピングサイト", items_index_path, id: "logo" %>
           <ul class="nav navbar-nav navbar-right">
             <% if logged_in? %>
               <li class="nav-Item"><%= link_to current_user.name , '#' %></li>
