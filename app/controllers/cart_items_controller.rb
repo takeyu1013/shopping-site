@@ -7,5 +7,6 @@ class CartItemsController < ApplicationController
   end
   def index
     @cart_items = current_user.cart_items.includes([:item])
+    @total_price = 0
   end
 end

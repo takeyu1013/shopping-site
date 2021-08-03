@@ -3,8 +3,9 @@
   <li>
     商品名: <%= cart_item.item.name %>
     数量：<%= cart_item.quantity %>
-    <%= cart_item.user_id %>
+    <% @total_price += cart_item.item.price * cart_item.quantity %>
   </li>
   <% end %>
 </ul>
-<%= button_to "購入する" %>>
+<p>合計金額：<%= @total_price %></p>
+<%= button_to "購入する", params: {total_price: @total_price } %>
