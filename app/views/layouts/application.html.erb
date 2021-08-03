@@ -16,6 +16,7 @@
         <%= link_to "ショッピングサイト", items_index_path, id: "logo" %>
           <ul class="nav navbar-nav navbar-right">
             <% if logged_in? %>
+              <li class="nav-Item"><%= link_to "カート", cart_items_index_path %></li>
               <li class="nav-Item"><%= link_to current_user.name , '#' %></li>
               <li class="nav-item"><%= link_to "ログアウト", logout_path, method: :delete %></li>
             <% else %>
