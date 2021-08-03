@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
   post 'items/show', to: 'cart_items#create'
   get 'cart_items/index'
-  post 'cart_items/index'
+  post 'cart_items/index', to: 'orders#create'
   resources :microposts
   resources :users
   resources :items
