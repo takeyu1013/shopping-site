@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   has_many :microposts
   has_many :cart_items, dependent: :destroy
+  has_many :order
   validates :name, presence: true
   validates :email, presence: true
   has_secure_password
