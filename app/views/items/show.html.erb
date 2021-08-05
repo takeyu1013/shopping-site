@@ -14,6 +14,6 @@
 </p>
 
 <% if current_user %>
-<%= button_to "カートに入れる", items_show_path({user_id: current_user.id, item_id: @item.id}) %>
+<%= button_to "カートに入れる", params: { item_id: @item.id } %>
 <% end %>
 <%= link_to 'Back', items_path %>
