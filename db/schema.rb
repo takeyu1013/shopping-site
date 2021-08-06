@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_05_130644) do
+ActiveRecord::Schema.define(version: 2021_08_06_125753) do
 
   create_table "cart_items", force: :cascade do |t|
     t.integer "user_id", null: false
@@ -58,7 +58,6 @@ ActiveRecord::Schema.define(version: 2021_08_05_130644) do
   end
 
   add_foreign_key "cart_items", "items"
-  add_foreign_key "cart_items", "orders"
   add_foreign_key "cart_items", "users"
   add_foreign_key "orders", "users"
 end
