@@ -1,0 +1,8 @@
+<ul class="orders">
+  <% @orders.each do | order | %>
+  <li>
+    注文日時: <%= order.updated_at %>
+    合計金額：<%= order.price %>
+  </li>
+  <% end %>
+</ul>

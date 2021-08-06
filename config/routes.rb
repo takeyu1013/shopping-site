@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   post 'items/:id', to: 'cart_items#create'
   get 'cart_items/index'
   post 'cart_items/index', to: 'orders#create'
+  get 'orders/index'
   resources :microposts
   resources :users
   resources :items
