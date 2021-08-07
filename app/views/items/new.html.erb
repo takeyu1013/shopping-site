@@ -1,2 +1,16 @@
-<h1>Items#new</h1>
-<p>Find me in app/views/items/new.html.erb</p>
+<% provide(:title, '商品登録') %>
+<h1>商品登録</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_with model: @item do |form| %>
+      <%= form.label :name, '商品名' %>
+      <%= form.text_field :name %>
+      <%= form.label :price, '価格' %>
+      <%= form.text_field :price %>円
+      <%= form.label :stock, '数量' %>
+      <%= form.text_field :stock %>
+      <%= form.submit '商品登録', class: 'btn btn-primary' %>
+    <% end %>
+  </div>
+</div>
