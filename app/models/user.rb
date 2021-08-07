@@ -1,5 +1,4 @@
 class User < ApplicationRecord
-  has_many :microposts
   has_many :cart_items, dependent: :destroy
   has_many :orders
   validates :name, presence: true
