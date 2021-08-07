@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_06_125753) do
+ActiveRecord::Schema.define(version: 2021_08_07_001209) do
 
   create_table "cart_items", force: :cascade do |t|
     t.integer "user_id", null: false
@@ -30,13 +30,6 @@ ActiveRecord::Schema.define(version: 2021_08_06_125753) do
     t.integer "price"
     t.integer "stock"
     t.string "image_url"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "microposts", force: :cascade do |t|
-    t.text "content"
-    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
