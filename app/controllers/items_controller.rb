@@ -3,7 +3,7 @@ class ItemsController < ApplicationController
     @item = Item.new
   end
   def create
-    @item = Item.new(params.require(:item).permit(:name, :price, :stock));
+    @item = Item.new(params.require(:item).permit(:name, :price, :stock, :image_url));
     @item.save
   end
   def index
