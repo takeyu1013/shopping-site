@@ -3,6 +3,8 @@ class ItemsController < ApplicationController
     @item = Item.new
   end
   def create
+    @item = Item.new(params.require(:item).permit(:name, :price, :stock));
+    @item.save
   end
   def index
     @items = Item.search(params[:keyword])

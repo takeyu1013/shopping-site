@@ -9,7 +9,8 @@
 <ul class="items">
   <% @items.each do | item | %>
   <li>
-    <%= image_tag(item.image_url, alt: item.name + "の画像") %>
+    <% @image_name = item.name + "の画像" %>
+    <%= item.image_url ? image_tag(item.image_url, alt: @image_name) : @image_name %>
     商品名：<%= link_to item.name, item %>
     価格：<%= item.price %>
     数量：<%= item.stock %>
