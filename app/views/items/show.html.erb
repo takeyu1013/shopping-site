@@ -13,7 +13,12 @@
   <%= @item.price %>
 </p>
 
-<% if current_user %>
+<p>
+  <strong>在庫数量：</strong>
+  <%= @item.stock %>
+</p>
+
+<% if current_user && @item.stock > 0 %>
 <%= button_to "カートに入れる", params: { item_id: @item.id } %>
 <% end %>
 <%= link_to 'Back', items_path %>
