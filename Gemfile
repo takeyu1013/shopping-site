@@ -7,6 +7,7 @@ ruby '2.7.3'
 gem 'rails', '~> 6.1.4'
 gem 'bcrypt', '3.1.13'
 gem 'bootstrap-sass', '3.4.1'
+gem 'carrierwave', '~> 2.0'
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
